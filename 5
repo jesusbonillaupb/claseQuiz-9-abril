@@ -1,0 +1,9 @@
+def imprimir_tabla(numero):
+    numero = (int(input("ingrese un numero ")))
+    LIMITE = (int(input("ingrese hasta que numero quiere que se realice la tabla ")))
+    contador=1
+    while contador <= LIMITE:
+        resultado = contador * numero
+        print("{} x {} = {}".format(numero, contador, resultado))
+        contador = contador + 1
+imprimir_tabla(1)
