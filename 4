@@ -1,0 +1,45 @@
+#calcuradora.py
+#
+#
+#################-1-###########################
+
+def sumar(): #Definimos la función sumar
+    x = a + b#se define x como la suma de a+b
+    print (("Resultado"), (x))#imprime el valor de x
+def restar():#Definimos la función restar
+    x = a - b  # se define x como la resta de a-b
+    print(("Resultado"), (x))  # imprime el valor de x
+def multiplicar():#Definimos la función multiplica
+    x = a * b#se define x como la mulplicacion de a+b# r
+    print(("Resultado"), (x))  # imprime el valor de x
+def dividir():#Definimos la función dividir
+    x = a / b  # se define x como la division de a/b
+    print(("Resultado"), (x))  # imprime el valor de x
+#################-2-###########################
+while True: #establece un ciclo que continuara a menos que el usuario seleccione una opcion
+    try:  # Intentamos obtener los datos de entrada
+        a = int(input("Ingresa el primer numero: \n"))  # pide valor a
+        b = int(input("Ingresa el segundo numero: \n"))  # pide valor
+        print(("Que cálculo quieres realizar entre"), (a), ("y"), (b), ("?\n"))
+        op = str(input(""" #Ofrecemos las opciones de cálculo que van a llamar a las funciones
+        1- Sumar 
+        2- Restar 
+        3- Multiplicar 
+        4- Dividir \n"""))#muestra las opciones que puede utilizar el usuario
+    except:  # En caso de error: imprime "Error"
+        print("Error")
+        op="?"
+    if op == '1':  # Si se elige opción 1 llamamos a sumar
+        sumar()
+        break  # detiene el ciclo
+    elif op == '2':  # Si se elige opción 2 llamamos a restar
+        restar()
+        break #detiene el ciclo
+    elif op == '3':  # Si se elige opción 3 llamamos a multiplicar
+        multiplicar()
+        break
+    elif op == '4':  # Si el usuario elige opción 4 llamamos a dividir
+        dividir()
+        break#detiene el ciclo
+    else:
+        print("""Has ingresado un numero de opcion erroneo""")  # En caso que el número no se encuentre
